@@ -24,6 +24,6 @@ RUN ls /usr/lib/node_modules/casperjs/
 
 RUN ls /usr/lib/node_modules/casperjs/modules/
 
-RUN phantomjs --version
+RUN cd ~ && find -name 'phantomjs'
 
 RUN casperjs --version
