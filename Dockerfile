@@ -9,4 +9,4 @@ ENV PHANTOMJS_CDNURL http://cnpmjs.org/downloads
 # Install casperjs and phantomjs
 RUN npm install -g casperjs
 # Symlink PhantomJS
-RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/phantomjs /usr/bin/phantomjs
+RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/phantomjs /usr/bin/phantomjs 
