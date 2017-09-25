@@ -25,3 +25,5 @@ RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/
 RUN ls /usr/lib/node_modules/
 
 RUN casperjs --version
+
+RUN ls -al /usr/lib/node_modules/
