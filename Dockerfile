@@ -22,4 +22,8 @@ RUN ls /usr/lib/node_modules/
 
 RUN ls /usr/lib/node_modules/casperjs/
 
-RUN pwd
+RUN ls /usr/lib/node_modules/casperjs/modules/
+
+RUN phantomjs --version
+
+RUN casperjs --version
