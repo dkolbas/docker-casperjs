@@ -9,7 +9,7 @@ ENV PHANTOMJS_VERSION 2.1.1
 ENV PHANTOMJS_CDNURL http://cnpmjs.org/downloads
 
 # Install casperjs and phantomjs
-RUN npm config set registry http://registry.npmjs.org/
+#RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g casperjs
 
 # Run things with latest version
