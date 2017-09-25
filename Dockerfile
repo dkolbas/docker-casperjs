@@ -18,6 +18,6 @@ RUN npm install -g casperjs
 # Symlink PhantomJS
 RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/phantomjs /usr/bin/phantomjs 
 
-RUN ls /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/
+RUN ls /usr/lib/node_modules/
 
 RUN ls /usr/lib/node_modules/casperjs/
