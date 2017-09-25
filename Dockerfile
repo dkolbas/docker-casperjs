@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:20
 MAINTAINER Dan Kolbas <dkolbas@redhat.com>
 
 # Required packages
@@ -21,8 +21,8 @@ RUN npm install -g casperjs
 # Symlink PhantomJS
 RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/phantomjs /usr/bin/phantomjs 
 
-RUN ls /usr/lib/node_modules/
-
-RUN casperjs --version
+RUN ls -al /usr/lib/node_modules/
 
 RUN ls -al /usr/lib/node_modules/
+
+RUN ls -al /usr/lib/casperjs/
