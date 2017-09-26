@@ -2,37 +2,26 @@ FROM fedora
 MAINTAINER Dan Kolbas <dkolbas@redhat.com>
 
 # Required packages
-RUN yum install -y vim wget gcc gcc-c++ make git openssl-devel freetype fontconfig libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6 nodejs npm bzip2; yum update -y; yum clean all
+RUN yum install -y \
+      vim \
+      wget \
+      gcc \
+      gcc-c++ \
+      make \
+      python \
+      git \
+      openssl-devel \
+      freetype \
+      fontconfig \
+      libfreetype.so.6 \
+      libfontconfig.so.1 \ 
+      libstdc++.so.6 \
+      nodejs \ 
+      npm \ 
+      bzip2
 
-# phantom version
-ENV PHANTOMJS_VERSION 2.1.1
-ENV PHANTOMJS_CDNURL http://cnpmjs.org/downloads
+RUN yum update -y
+RUN yum clean all
 
 # Install PhantomJs
-RUN cd /usr/local/bin
-RUN wget https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
-RUN tar -xvf phantomjs-2.1.1-linux-x86_64.tar.bz2
-RUN ln -s /usr/local/bin/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
-RUN ls -al /usr/local/bin
-
-# Install casperjs
-RUN cd /usr/local/bin
-RUN git clone git://github.com/casperjs/casperjs.git
-RUN ln -sf /usr/local/bin/casperjs/bin/casperjs /usr/local/bin/casperjs
-RUN ls -al /usr/local/bin
-
-RUN phantomjs --version
-RUN casperjs --version
-
-
-# Run things with latest version
-# npm install -g git+https://github.com/casperjs/casperjs.git
-
-# Symlink PhantomJS
-#RUN ln -s /usr/lib/node_modules/casperjs/node_modules/phantomjs/lib/phantom/bin/phantomjs /usr/bin/phantomjs 
-
-#RUN ls -al /usr/lib/node_modules/
-
-#RUN ls -al /usr/lib/node_modules/
-
-#RUN ls -al /usr/lib/casperjs/
+RUN npm install -g casperjs phantomjs
