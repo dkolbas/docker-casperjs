@@ -1,4 +1,4 @@
-FROM fedora:20
+FROM fedora
 MAINTAINER Dan Kolbas <dkolbas@redhat.com>
 
 # Required packages
