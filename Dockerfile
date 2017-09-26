@@ -19,7 +19,9 @@ RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g casperjs
 RUN ls -al /usr/bin/
 RUN ls -al /usr/local/bin
-RUN ls -al /usr/lib/node_modules/
+
+RUN casperjs --version
+RUN phantomjs --version
 
 # Run things with latest version
 # npm install -g git+https://github.com/casperjs/casperjs.git
