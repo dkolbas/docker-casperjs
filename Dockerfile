@@ -20,8 +20,9 @@ RUN npm install -g casperjs
 RUN ls -al /usr/bin/
 RUN ls -al /usr/local/bin
 
-RUN casperjs --version
 RUN phantomjs --version
+RUN casperjs --version
+
 
 # Run things with latest version
 # npm install -g git+https://github.com/casperjs/casperjs.git
