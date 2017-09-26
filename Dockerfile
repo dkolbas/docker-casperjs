@@ -11,12 +11,13 @@ ENV PHANTOMJS_CDNURL http://cnpmjs.org/downloads
 # Install PhantomJs
 RUN wget https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN tar -xvf phantomjs-2.1.1-linux-x86_64.tar.bz2
-RUN ln -s phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+RUN ln -s phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 RUN ls -al /usr/bin
 
 # Install casperjs
 RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g casperjs
+RUN ln -sf /usr/bin/casperjs/bin/casperjs /usr/local/bin/casperjs
 RUN ls -al /usr/bin/
 RUN ls -al /usr/local/bin
 
